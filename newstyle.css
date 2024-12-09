@@ -1,0 +1,158 @@
+/* General Styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    background-image: url(src/quizz.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Button */
+.nav-button {
+    background: linear-gradient(45deg, #ff0000, #ff6b6b);
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-button:hover {
+    background: linear-gradient(45deg, #d39f9f, #ff6b6b);
+    transform: translateY(2px);
+}
+
+/* Main Section */
+main {
+    margin: auto;
+}
+
+/* Glassmorphism Effect */
+.section_10 {
+    max-width: 100%; /* Allow the container to take full width */
+    margin: 3rem 2rem; /* Add some side margins for smaller screens */
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.2); /* Transparent white */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /* Blur effect behind the element */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Glass border effect */
+}
+
+/* Form Heading */
+.form-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Form Styles */
+.input, .textinput {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ff2a00;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    background-color: rgba(248, 248, 248, 0.7); /* Slightly transparent background */
+}
+
+.input:focus, .textinput:focus {
+    border-color: #bf0d0d;
+    outline: none;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #ff0000, #6d0d04);
+    color: white;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #7f0000, #ff1212);
+    transform: translateY(-3px);
+}
+
+/* Responsive Layout */
+.responsive-container-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.responsive-cell-block {
+    width: 100%; /* Make sure each form element takes full width */
+    padding: 10px;
+}
+
+/* Media Queries for different screen sizes */
+@media (min-width: 768px) {
+    .section_10 {
+        max-width: 720px; /* Narrower form for tablet devices */
+        margin: 3rem auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .section_10 {
+        max-width: 900px; /* Wider form for larger screens */
+        margin: 3rem auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section_10 {
+        max-width: 1000px; /* Larger form width for desktop screens */
+        margin: 3rem auto;
+    }
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .section_10 {
+    background: rgba(0, 0, 0, 0.5); /* Transparent black glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect behind the element for Safari */
+    backdrop-filter: blur(10px); /* Blur effect behind the element */   
+     border: 1px solid rgba(255, 255, 255, 0.1); /* Light border for contrast */
+}
+
+body.dark-mode h2{
+    color: #e0e0e0;
+}
+
+body.dark-mode .input, body.dark-mode .textinput {
+    background-color: rgba(51, 51, 51, 0.7); /* Darker input backgrounds in dark mode */
+    border-color: rgba(255, 255, 255, 0.3); /* Softer border color */
+}
+
+body.dark-mode .submit-btn {
+    background: linear-gradient(135deg, #010000, #d80000); /* Bright buttons even in dark mode */
+    color: white;
+}
+
+
+body.dark-mode .input, .textinput {
+    color: #e0e0e0;
+}

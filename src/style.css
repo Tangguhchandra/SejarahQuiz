@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+  background: url('../src/gensin.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  position: relative;
+}
+
+main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2; /* Place main content above the overlay */
+}
+
+.box {
+  background-color: #fff; /* Light mode background */
+  width: 90%;
+  max-width: 500px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  color: #333; /* Light mode text color */
+  z-index: 3;
+}
+
+body.dark-mode .box {
+  background-color: #333; /* Dark mode background */
+  color: #fff; /* Dark mode text color */
+}
+
+.Ques {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.row {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+}
+.submitRow{
+  font-size: 1.2rem;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.options {
+  margin-right: 10px;
+}
+
+.btn {
+  outline: none;
+  width: 100%;
+  font-size: 1.4rem;
+  background: linear-gradient(45deg, #ff0000, #ff6b6b);
+  border: none;
+  border-radius: 25px;
+  font-weight: 500;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 20px;
+  width: calc(50% - 10px);
+}
+
+.btn2 {
+  outline: none;
+  width: 100%;
+  font-size: 1.3rem;
+  background: linear-gradient(45deg, #ff0000, #ff6b6b);
+  border: none;
+  border-radius: 25px;
+  font-weight: 500;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 20px;
+  width: calc(50% - 10px);
+}
+.row:hover{
+  background: linear-gradient(45deg, #ff0000, #ff6b6b);
+}
+.btn:hover {
+  background: linear-gradient(45deg, #ff6b6b, #ff0000); /* Membalikkan gradasi */
+  transform: scale(1.1); /* Memperbesar sedikit */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn2:hover {
+  background: linear-gradient(45deg, #ff0000, #ff6b6b);
+  background: linear-gradient(45deg, #ff6b6b, #ff0000); /* Membalikkan gradasi */
+  transform: scale(1.1); /* Memperbesar sedikit */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.head {
+  font-size: 2rem;
+  margin: 20px;
+}
+
+.marks {
+  font-size: 1.5rem;
+  margin: 50px;
+}
+
+.result {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.again {
+  margin-top: 20px;
+  width: 100%;
+  position: static;
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
+.copyRight {
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 2rem;
+  text-align: center;
+  width: 100%;
+  color: #e2dfdf;
+}
+
+/* Responsive design adjustments */
+@media screen and (max-width: 768px) {
+  .box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .Ques {
+    font-size: 1.5rem;
+  }
+
+  .row {
+    font-size: 1rem;
+  }
+
+  .btn,.btn2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .box {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .Ques {
+    font-size: 1.2rem;
+  }
+
+  .row {
+    font-size: 0.9rem;
+  }
+
+  .btn,.btn2 {
+    font-size: 1rem;
+  }
+}
+
+.progress-container {
+  width: 100%; 
+  background-color: #e0e0e0; 
+  border-radius: 25px; 
+  margin: 20px 0; 
+  height: 20px; 
+  overflow: hidden; 
+}
+
+.progress-bar {
+  height: 100%; 
+  width: 0; 
+  background: linear-gradient(45deg, #ff0000, #ff6b6b);
+  border-radius: 25px; 
+  transition: width 0.3s ease; 
+}
+#theme-toggle {
+  background: linear-gradient(45deg, #ff0000, #ff6b6b);
+    color: rgb(255, 255, 255); /* Text color */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Add hover effect */
+#theme-toggle:hover {
+  background: linear-gradient(45deg, #d39f9f, #ff6b6b);
+  transform: translateY(2px);
+}
+
+/* Active state effect */
+#theme-toggle:active {
+  background: linear-gradient(45deg, #ff0000, #ff6b6b);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #theme-toggle {
+        font-size: 14px; /* Smaller font on mobile */
+        padding: 8px 16px; /* Adjust padding on mobile */
+    }
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 601px) {
+    #theme-toggle {
+        font-size: 16px; /* Back to normal font size */
+        padding: 10px 20px; /* Back to normal padding */
+    }
+}
+
+#timer {
+  font-size: 1.5rem;
+  background: linear-gradient(45deg, #ff0000, #ff6b6b); /* Gradien warna */
+  -webkit-background-clip: text; /* Membuat latar belakang klip ke teks */
+  -webkit-text-fill-color: transparent; /* Membuat teks transparan untuk menampilkan latar belakang */
+  margin-bottom: 20px;
+}
+
+
+.results-box {
+  border: 1px solid #c53c3c;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.about-container {
+  text-align: center;
+  padding: 40px;
+  background-color: #f4f4f9;
+}
+
+.about-container h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.profile {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.profile h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.profile p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.profile a {
+  color: #ff6b6b;
+  text-decoration: none;
+}
+
+.profile a:hover {
+  text-decoration: underline;
+}
+
+.music-container {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px; /* Jarak tambahan dari bawah */
+}
+
+.music-button {
+  padding: 13px 20px;
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.music-button:hover {
+  background-color: #ff1e1e;
+  transform: scale(1.05);
+}
+
+.music-button:focus {
+  outline: none;
+  box-shadow: 0 0 10px #ff6b6b;
+}
+
+.music-container h2 {
+
+  font-size: 1.5rem;
+  color: #feeeee;
+  margin-bottom: 15px;
+}

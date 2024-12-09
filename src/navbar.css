@@ -1,0 +1,40 @@
+.navbar {
+    background-color: #ffffffa2; /* Light mode background */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #fa1515; /* Light mode text color */
+    /* z-index: 10; */
+}
+
+body.dark-mode .navbar {
+    background-color: #1a1717; /* Dark mode background */
+    color: #deedf7; /* Dark mode text color */
+}
+
+
+.navbar a {
+    float: left;
+    display: block;
+    /* color: blue; */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: #db3434; /* Light mode link color */
+    
+}
+
+body.dark-mode .navbar a {
+    color: #deedf7; /* Dark mode link color */
+}
+
+.navbar > .links {
+    font-size: 16px;
+}
+
+body.dark-mode .navbar > .links {
+    color: #deedf7; /* Dark mode link color for .links */
+}

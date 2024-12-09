@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/navbar.css" />
+    <link rel="stylesheet" href="src/footer.css" />
+    <link rel="stylesheet" href="src/style.css" />
+    <script defer src="src/app.js"></script>
+    <title>Absent 28 and 27</title>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <h2><a href="index.html">Sejarah Quiz</a></h2>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <button id="theme-toggle" class="nav-button">Toggle Theme</button>
+      </div>
+    </div>
+    <main>
+      <div class="box">
+        <div id="timer" style="font-size: 1.5rem; color: #3498db; margin-bottom: 20px;">00:00</div>
+        <div class="progress-container">
+          <div class="progress-bar"></div>
+        </div>
+        <h1 class="Ques">Q1) What is Your Name?</h1>
+        <div class="row">
+          <input
+            type="radio"
+            class="options"
+            id="option1"
+            value="a"
+            name="ques"
+          />
+        
+         
+        <div class="row">
+          <button class="btn submit2">Prev</button>
+          <button class="btn2 submit">Submit</button>
+        </div>
+      </div>
+    </main>
+
+    <div class="music-container">
+    <h2>Enjoy Some Music</h2>
+    <audio id="background-music" autoplay loop>
+        <source src="src/music/background-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="toggle-music" class="music-button">Pause Music</button>
+</div>
+
+
+    <footer>
+      <div class="copyright">Tangguh Chandra_28 Sivananda_27</div>
+     
+      </div>
+    </footer>
+    <script src="src/theme.js"></script>
+  </body>
+</html>
